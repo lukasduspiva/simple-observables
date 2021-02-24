@@ -1,21 +1,33 @@
-# Simple Observables
+# Simple Observables 🔭
 
 ## Idea
 
-**To have simple JavaScript API for creating and using observable/subscription pattern**, without the need of importing super-heavy libraries such as [RxJS](https://github.com/ReactiveX/rxjs) (which I personally found to be one of the best libraries ever made).
+**To have a simple JavaScript API for creating and using observable/subscription pattern**, without the need of importing super-heavy libraries such as [RxJS](https://github.com/ReactiveX/rxjs) (which I personally found to be one of the best libraries ever made).
 
 ## Getting Started
+
+### Installation
 
 Via `yarn`:
 
 ```cmd
-yarn add simple-subscriptions
+yarn add simple-observables
 ```
 
 Via `npm`:
 
 ```
-npm install simple-subscriptions
+npm install simple-observables
+```
+
+### Usage
+
+ES modules:
+
+```
+import { createObservable } from 'simple-observables';
+
+const myObservable = createObservable();
 ```
 
 ## API `createObservable`
@@ -32,8 +44,6 @@ Creates an observable value and returns:
 ```js
 const [getAnimal, setAnimal, subscribe, unsubscribe] = createObservable();
 
-console.log(getAnimal()); // undefined
-
 setAnimal('🐱');
 console.log(getAnimal()); // 🐱
 
@@ -46,12 +56,11 @@ setAnimal('🦊'); // My current animal is: 🦊
 
 unsubscribe(logAnimal);
 console.log(getAnimal()); // 🦊
-setAnimal('🐮');
 ```
 
 ### API Design
 
-- **Array destructuring** to let you name your variables:
+- **Array destructuring** is letting you name your variables:
 
 ```js
 const [getValue, setValue, subscribe, unsubscribe] = createObservable();
@@ -74,15 +83,15 @@ subscribe(logWithA);
 subscribe(logWithB);
 // ...
 
-setValue('Hello!'); // A: Hello!
-// B: Hello!
+setValue('Hello!'); /* A: Hello!
+                       B: Hello! */
 
 unsubscribe(logWithA);
 unsubscribe(logWithB);
 // ...
 ```
 
-- **Initial value** can be provided:
+- **Initial value** for observable can be provided:
 
 ```js
 const initialValue = {
