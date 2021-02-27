@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- TypeScript example to `README.md` by [@lukasduspiva](https://github.com/lukasduspiva).
+- Status badges to `README.md` by [@lukasduspiva](https://github.com/lukasduspiva).
+
 ## [0.3.0] - 2021-02-27
 
 ### Added

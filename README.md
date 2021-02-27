@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/lukasduspiva/simple-observables)](https://github.com/lukasduspiva/simple-observables/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/simple-observables.svg?style=flat)](https://www.npmjs.com/package/simple-observables) [![Downloads](https://img.shields.io/npm/dt/simple-observable)](https://www.npmjs.com/package/simple-observables) [![GitHub issues](https://img.shields.io/github/issues/lukasduspiva/simple-observables)](https://github.com/lukasduspiva/simple-observables/issues) ![GitHub language](https://img.shields.io/github/languages/top/lukasduspiva/simple-observables) ![Minified size](https://img.shields.io/bundlephobia/minzip/simple-observables)
+
 # Simple Observables 🔭
 
 ## Idea
@@ -102,4 +104,29 @@ const initialValue = {
 const [getValue] = createObservable(initialValue);
 
 console.log(getValue()); // { preferredGreeting: "Ahoj", profession: "Pirate" }
+```
+
+- **TypeScript** support out of the box:
+
+```ts
+type Book = {
+  name: string;
+  author: string;
+};
+
+const doSomethingWithBook = (book?: Book) => {
+  /* ... */
+};
+
+const bookObservable = createObservable<Book | undefined>(undefined);
+const [getBook, setBook, subscribe, unsubscribe] = bookObservable;
+
+subscribe(doSomethingWithBook);
+
+setBook({
+  name: 'The Metabarons',
+  author: 'Alejandro Jodorowsky',
+});
+
+unsubscribe(doSomethingWithBook);
 ```
