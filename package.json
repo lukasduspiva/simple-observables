@@ -1,12 +1,13 @@
 {
   "name": "simple-observables",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Simple observable implementation for JavaScript",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "build": "rollup --config",
-    "pretty": "prettier --write \"./src/**/*.js\" \"*.md\"",
+    "pretty": "prettier --write \"./src/**/*.js\" \"*.md\" \"./types/**/*.ts\"",
     "test": "jest",
     "test:watch": "jest --watch"
   },
