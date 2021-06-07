@@ -50,12 +50,8 @@ describe('createObservable', () => {
     });
     describe('when focusing on `unsubscribe` (fourth desctructured value)', () => {
       it('should be a function', () => {
-        const [
-          _getValue,
-          _setValue,
-          _subscribe,
-          unsubscribe,
-        ] = createObservable();
+        const [_getValue, _setValue, _subscribe, unsubscribe] =
+          createObservable();
         expect(typeof unsubscribe).toBe('function');
       });
       it('should remove the effect of subscription, so once `setValue` is called it no longer invokes observer', () => {
