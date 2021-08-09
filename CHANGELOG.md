@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added GitHub Action to generate codebase diagram used in `README.md` by [@lukasduspiva](https://github.com/lukasduspiva).
+
 ## [0.4.0] - 2021-06-07
 
 ### Added

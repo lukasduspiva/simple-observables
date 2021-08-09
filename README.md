@@ -130,3 +130,7 @@ setBook({
 
 unsubscribe(doSomethingWithBook);
 ```
+
+## Code in Repository
+
+![Visualization of the codebase](./diagram.svg)
