@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Change
+
+- Updated repo visualizer (GitHub Action) commit message by [@lukasduspiva](https://github.com/lukasduspiva).
+
 ## [0.5.0] - 2022-11-08
 
 ### Added
