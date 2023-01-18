@@ -26,7 +26,7 @@ npm install simple-observables
 
 ES modules:
 
-```
+```js
 import { createObservable } from 'simple-observables';
 
 const myObservable = createObservable();
