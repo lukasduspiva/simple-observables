@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed links in `CHANGELOG.md` by [@lukasduspiva](https://github.com/lukasduspiva).
 - Fixed usage code example highlighting in `README.md` by [@lukasduspiva](https://github.com/lukasduspiva).
+- Fixed typo in tests by [@lukasduspiva](https://github.com/lukasduspiva).
 
 ## [0.5.0] - 2022-11-08
 

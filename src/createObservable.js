@@ -5,6 +5,7 @@ export function createObservable(initialValue) {
   function getValue() {
     return value;
   }
+
   function setValue(newValue) {
     value = newValue;
     subscriptions.forEach((subscription) => subscription(newValue));

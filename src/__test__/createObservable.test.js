@@ -11,7 +11,7 @@ describe('createObservable', () => {
     expect(Array.isArray(createObservable())).toBe(true);
   });
   describe('when called with no argument', () => {
-    describe('when focusing on `getValue` (first desctructured value)', () => {
+    describe('when focusing on `getValue` (first destructured value)', () => {
       it('should be a function', () => {
         const [getValue] = createObservable();
         expect(typeof getValue).toBe('function');
@@ -21,7 +21,7 @@ describe('createObservable', () => {
         expect(getValue()).toBe(undefined);
       });
     });
-    describe('when focusing on `setValue` (second desctructured value)', () => {
+    describe('when focusing on `setValue` (second destructured value)', () => {
       it('should be a function', () => {
         const [_getValue, setValue] = createObservable();
         expect(typeof setValue).toBe('function');
@@ -32,7 +32,7 @@ describe('createObservable', () => {
         expect(getValue()).toBe(':-)');
       });
     });
-    describe('when focusing on `subscribe` (third desctructured value)', () => {
+    describe('when focusing on `subscribe` (third destructured value)', () => {
       it('should be a function', () => {
         const [_getValue, _setValue, subscribe] = createObservable();
         expect(typeof subscribe).toBe('function');
@@ -48,7 +48,7 @@ describe('createObservable', () => {
         });
       });
     });
-    describe('when focusing on `unsubscribe` (fourth desctructured value)', () => {
+    describe('when focusing on `unsubscribe` (fourth destructured value)', () => {
       it('should be a function', () => {
         const [_getValue, _setValue, _subscribe, unsubscribe] =
           createObservable();
@@ -68,7 +68,7 @@ describe('createObservable', () => {
     });
   });
   describe('when called with a argument', () => {
-    describe('when focusing on `getValue` (first desctructured value)', () => {
+    describe('when focusing on `getValue` (first destructured value)', () => {
       it('should return the passed argument', () => {
         const [getValue] = createObservable(':-O');
         expect(getValue()).toBe(':-O');
